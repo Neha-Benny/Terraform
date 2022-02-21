@@ -1,0 +1,261 @@
+{
+  "version": 4,
+  "terraform_version": "1.1.5",
+  "serial": 2,
+  "lineage": "06a863d8-303a-7844-687e-19aa036b8d96",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "data",
+      "type": "azurerm_resource_group",
+      "name": "example",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "/subscriptions/88e5b8f5-e109-4e20-872c-0bd838d42c12/resourceGroups/mydemostg",
+            "location": "centralus",
+            "name": "mydemostg",
+            "tags": {},
+            "timeouts": null
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "azurerm_virtual_network",
+      "name": "example",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address_space": [
+              "10.7.0.0/16"
+            ],
+            "dns_servers": [],
+            "guid": "378a57c1-c880-41a0-8402-d9d4d2653be1",
+            "id": "/subscriptions/88e5b8f5-e109-4e20-872c-0bd838d42c12/resourceGroups/mydemostg/providers/Microsoft.Network/virtualNetworks/demo-network",
+            "location": "centralus",
+            "name": "demo-network",
+            "resource_group_name": "mydemostg",
+            "subnets": [
+              "demo-sub",
+              "demo-sub2"
+            ],
+            "timeouts": null,
+            "vnet_peerings": {}
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "module": "module.webapp",
+      "mode": "data",
+      "type": "azurerm_app_service_plan",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "app_service_environment_id": null,
+            "id": "/subscriptions/88e5b8f5-e109-4e20-872c-0bd838d42c12/resourceGroups/newrg/providers/Microsoft.Web/serverfarms/djangowebapp12",
+            "is_xenon": false,
+            "kind": "linux",
+            "location": "centralindia",
+            "maximum_elastic_worker_count": 1,
+            "maximum_number_of_workers": 30,
+            "name": "djangowebapp12",
+            "per_site_scaling": false,
+            "reserved": true,
+            "resource_group_name": "newrg",
+            "sku": [
+              {
+                "capacity": 1,
+                "size": "P1v2",
+                "tier": "PremiumV2"
+              }
+            ],
+            "tags": {},
+            "timeouts": null,
+            "zone_redundant": false
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "module": "module.webapp",
+      "mode": "managed",
+      "type": "azurerm_app_service",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "app_service_plan_id": "/subscriptions/88e5b8f5-e109-4e20-872c-0bd838d42c12/resourceGroups/newrg/providers/Microsoft.Web/serverfarms/djangowebapp12",
+            "app_settings": {
+              "WEBSITES_PORT": "8000"
+            },
+            "auth_settings": [
+              {
+                "active_directory": [],
+                "additional_login_params": {},
+                "allowed_external_redirect_urls": [],
+                "default_provider": "",
+                "enabled": false,
+                "facebook": [],
+                "google": [],
+                "issuer": "",
+                "microsoft": [],
+                "runtime_version": "",
+                "token_refresh_extension_hours": 0,
+                "token_store_enabled": false,
+                "twitter": [],
+                "unauthenticated_client_action": ""
+              }
+            ],
+            "backup": [],
+            "client_affinity_enabled": false,
+            "client_cert_enabled": false,
+            "connection_string": [],
+            "custom_domain_verification_id": "2BE57594EAE70FCEF419DA403578E048218707E547B8F08DFF12073322A42939",
+            "default_site_hostname": "mydockerdjango.azurewebsites.net",
+            "enabled": true,
+            "https_only": false,
+            "id": "/subscriptions/88e5b8f5-e109-4e20-872c-0bd838d42c12/resourceGroups/UST-Saikiran-RG/providers/Microsoft.Web/sites/mydockerdjango",
+            "identity": [],
+            "location": "centralindia",
+            "logs": [
+              {
+                "application_logs": [
+                  {
+                    "azure_blob_storage": [],
+                    "file_system_level": "Off"
+                  }
+                ],
+                "detailed_error_messages_enabled": false,
+                "failed_request_tracing_enabled": false,
+                "http_logs": [
+                  {
+                    "azure_blob_storage": [],
+                    "file_system": []
+                  }
+                ]
+              }
+            ],
+            "name": "mydockerdjango",
+            "outbound_ip_address_list": [
+              "20.193.140.246",
+              "20.193.139.248",
+              "20.193.140.11",
+              "20.193.140.52",
+              "20.193.140.98",
+              "20.193.140.247",
+              "52.140.106.225"
+            ],
+            "outbound_ip_addresses": "20.193.140.246,20.193.139.248,20.193.140.11,20.193.140.52,20.193.140.98,20.193.140.247,52.140.106.225",
+            "possible_outbound_ip_address_list": [
+              "20.193.140.236",
+              "20.193.140.240",
+              "20.193.140.242",
+              "20.193.140.243",
+              "20.193.140.244",
+              "20.193.140.245",
+              "20.193.140.246",
+              "20.193.139.248",
+              "20.193.140.11",
+              "20.193.140.52",
+              "20.193.140.98",
+              "20.193.140.247",
+              "52.172.157.211",
+              "52.172.163.207",
+              "52.172.161.171",
+              "52.172.133.177",
+              "104.211.88.227",
+              "52.172.160.202",
+              "20.204.96.223",
+              "52.172.238.229",
+              "20.204.131.0",
+              "20.204.131.154",
+              "20.204.51.18",
+              "20.204.98.135",
+              "52.140.106.225"
+            ],
+            "possible_outbound_ip_addresses": "20.193.140.236,20.193.140.240,20.193.140.242,20.193.140.243,20.193.140.244,20.193.140.245,20.193.140.246,20.193.139.248,20.193.140.11,20.193.140.52,20.193.140.98,20.193.140.247,52.172.157.211,52.172.163.207,52.172.161.171,52.172.133.177,104.211.88.227,52.172.160.202,20.204.96.223,52.172.238.229,20.204.131.0,20.204.131.154,20.204.51.18,20.204.98.135,52.140.106.225",
+            "resource_group_name": "UST-Saikiran-RG",
+            "site_config": [
+              {
+                "acr_use_managed_identity_credentials": false,
+                "acr_user_managed_identity_client_id": "",
+                "always_on": false,
+                "app_command_line": "",
+                "auto_swap_slot_name": "",
+                "cors": [
+                  {
+                    "allowed_origins": [],
+                    "support_credentials": false
+                  }
+                ],
+                "default_documents": [],
+                "dotnet_framework_version": "v4.0",
+                "ftps_state": "AllAllowed",
+                "health_check_path": "",
+                "http2_enabled": false,
+                "ip_restriction": [],
+                "java_container": "",
+                "java_container_version": "",
+                "java_version": "",
+                "linux_fx_version": "DOCKER|rkudache31/djangoweb:latest",
+                "local_mysql_enabled": false,
+                "managed_pipeline_mode": "Integrated",
+                "min_tls_version": "1.2",
+                "number_of_workers": 1,
+                "php_version": "",
+                "python_version": "",
+                "remote_debugging_enabled": false,
+                "remote_debugging_version": "VS2019",
+                "scm_ip_restriction": [],
+                "scm_type": "None",
+                "scm_use_main_ip_restriction": false,
+                "use_32_bit_worker_process": false,
+                "vnet_route_all_enabled": false,
+                "websockets_enabled": false,
+                "windows_fx_version": ""
+              }
+            ],
+            "site_credential": [
+              {
+                "password": "Nv8lCxsZNQtH71ubc5q2eA1Y5mk2dgNkn1nduLMJxsSnFTCcPMtns3cZuWnw",
+                "username": "$mydockerdjango"
+              }
+            ],
+            "source_control": [
+              {
+                "branch": "master",
+                "manual_integration": false,
+                "repo_url": "",
+                "rollback_enabled": false,
+                "use_mercurial": false
+              }
+            ],
+            "storage_account": [],
+            "tags": {},
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "module.webapp.data.azurerm_app_service_plan.this"
+          ]
+        }
+      ]
+    }
+  ]
+}

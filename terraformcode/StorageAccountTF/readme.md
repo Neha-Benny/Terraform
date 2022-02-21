@@ -1,0 +1,1 @@
+This is Terraform code for creating Storage Account

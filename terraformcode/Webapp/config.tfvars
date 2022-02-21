@@ -1,0 +1,7 @@
+stgname = "ust-akhil-rg"
+stglocation="East US"
+planname = "ustakhildjangoplan"
+planrg="ust-akhil-rg"
+appname="ustakhildjangoapp"
+location="East US"
+resource_group_name="ust-akhil-rg"

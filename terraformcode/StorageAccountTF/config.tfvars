@@ -1,0 +1,5 @@
+name="akhilrg2"
+location="east us"
+accountname= "akhilstorageaccount2"
+account_tier ="Standard"
+account_replication_type = "GRS"
